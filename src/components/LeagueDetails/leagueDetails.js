@@ -6,7 +6,7 @@ function LeagueDetails({ match }) {
   const [leagueDetails, setLeagueDetails] = useState({})
   useEffect(() => {
     fetch()
-  },leagueDetails)
+  })
   var fetch = async () => {
     const result = await axios.get(`https://www.thesportsdb.com/api/v1/json/1/lookupleague.php?id=${match.params.id}`)
     setLeagueDetails(result.data.leagues[0])
